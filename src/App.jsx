@@ -13,21 +13,21 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div className={`App ${darkMode ? 'dark' : ''}`}>
+      <motion.div className={`App ${darkMode ? 'dark' : ''}`}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className='min-h-screen bg-[#eee] dark:bg-[#333]'
         >
-          <motion.div className='container p-10'>
+          <motion.div className='container mx-auto p-10'>
             <motion.h1 className='p-4 text-[#333] dark:text-[#eee]'>
               {darkMode ? 'Dark' : 'Light'} Mode
             </motion.h1>
             <Switch toggle={toggle} />
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </AnimatePresence>
   )
 }
